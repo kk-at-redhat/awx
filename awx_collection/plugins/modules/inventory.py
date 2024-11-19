@@ -177,17 +177,17 @@ def main():
     organization = module.params.get('organization')
     state = module.params.get('state')
     kind = module.params.get('kind')
-  
+
     if kind == 'constructed':
-      input_inventory_names = module.params.get('input_inventories')
-      source_vars = module.params.get('source_vars')
-      update_cache_timeout = module.params.get('update_cache_timeout')
-      limit = module.params.get('limit')
-      verbosity = module.params.get('verbosity')
+        input_inventory_names = module.params.get('input_inventories')
+        source_vars = module.params.get('source_vars')
+        update_cache_timeout = module.params.get('update_cache_timeout')
+        limit = module.params.get('limit')
+        verbosity = module.params.get('verbosity')
     else:
-      variables = module.params.get('variables')
-      host_filter = module.params.get('host_filter')
-      prevent_instance_group_fallback = module.params.get('prevent_instance_group_fallback')
+        variables = module.params.get('variables')
+        host_filter = module.params.get('host_filter')
+        prevent_instance_group_fallback = module.params.get('prevent_instance_group_fallback')
 
     # Attempt to look up the related items the user specified (these will fail the module if not found)
     org_id = module.resolve_name_to_id('organizations', organization)
@@ -279,3 +279,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
