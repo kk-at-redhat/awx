@@ -445,7 +445,7 @@ EXAMPLES = '''
     organization: Default
 
 - name: Create a workflow job template with workflow nodes in template
-  awx.awx.workflow_job_template:
+  workflow_job_template:
     name: example-workflow
     inventory: Demo Inventory
     extra_vars: {'foo': 'bar', 'another-foo': {'barz': 'bar2'}}
@@ -510,7 +510,7 @@ EXAMPLES = '''
     organization: Foo
 
 - name: Create a workflow job template with workflow nodes in template
-  awx.awx.workflow_job_template:
+  workflow_job_template:
     name: example-workflow
     inventory: Demo Inventory
     extra_vars: {'foo': 'bar', 'another-foo': {'barz': 'bar2'}}
